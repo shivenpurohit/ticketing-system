@@ -1,0 +1,16 @@
+properties:
+- {name: open, type: boolean, default_value: false, important: true, default_binding_prop: true, designer_hint: toggle}
+is_package: true
+events: []
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties:
+    html: |-
+      <div anvil-name="shield" class="shield"></div>
+      <div class="sliding-panel">
+        <div anvil-name="panel-content-static" class="static-section " anvil-slot="panel-content-static-slot" ></div>
+        <div anvil-name="panel-content" class="scrolling-section" anvil-slot="panel-content-slot" ></div>
+      </div>
+custom_component_container: true

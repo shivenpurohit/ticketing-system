@@ -1,0 +1,37 @@
+container:
+  type: HtmlTemplate
+  properties:
+    html: |-
+      <div style="--percent:0" anvil-name="progress-chart">
+        <svg width="120" height="120" viewbox="0 0 120 120">
+          <circle
+            cx="60"
+            cy="60"
+            r="52"
+            fill="none"
+            stroke="var(--grey-100, #eee)"
+            stroke-width="8" />
+          <circle
+            cx="60"
+            cy="60"
+            r="52"
+            fill="none"
+            stroke="var(--lilac-500, #9a4dce)"
+            stroke-width="8"
+            stroke-dasharray="calc(var(--percent, 0) * 326.73) 326.73"
+            transform="rotate(-90 60 60)" />
+          <text anvil-name="progress-chart-text"
+            fill="var(--primary-500, black)"
+            style="font-size:36px; font-family:Barlow;"
+            text-anchor="middle"
+            x="60"
+            y="70"></text>
+        </svg>
+      </div>
+  event_bindings: {}
+components: []
+is_package: true
+custom_component: true
+properties:
+- {name: percentage, type: number, important: true, default_binding_prop: true, default_value: 1}
+- {name: display_value, type: number, important: true, default_value: 0}
